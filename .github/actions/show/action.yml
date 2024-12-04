@@ -26,7 +26,7 @@ runs:
        
       with:
         OUT1: ${{ inputs.OUT1 }}
-        OUT2: ${{ inputs.OUT3 }}
+        OUT2: ${{ inputs.OUT2 }}
         script: |
           console.log("1:" +core.getInput('OUT1'));
           console.log("2:" +core.getInput('OUT2'));
