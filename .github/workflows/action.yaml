@@ -34,3 +34,12 @@ jobs:
         env:
           INPUT_OUT1: OUT-ENV
           INPUT_OUT2: OUT-ENV
+
+      - name: Iregular case 3
+        uses: ./.github/actions/show
+        with:
+          OUT1: OUT-WITH
+        env:
+          INPUT_OUT1: OUT-ENV
+          INPUT_OUT2: OUT-ENV
+          INPUT_OUT3: OUT-ENV
