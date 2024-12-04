@@ -1,0 +1,34 @@
+name: Use action
+on:
+  workflow_dispatch:
+
+jobs:
+  out:
+    name: Use show action several time
+    runs-on: ubuntu-latest
+    steps:
+      - name: Regular case 1
+        uses: ./.github/actions/show
+        with:
+          OUT1: OUT-WITH
+
+      - name: Regular case 2
+        uses: ./.github/actions/show
+        with:
+          OUT1: OUT-WITH
+          OUT2: OUT-WITH
+      
+      - name: Iregular case 1
+        uses: ./.github/actions/show
+        with:
+          OUT1: OUT-WITH
+        env:
+          INPUT_OUT1: OUT-ENV
+
+      - name: Iregular case 2
+        uses: ./.github/actions/show
+        with:
+          OUT1: OUT-WITH
+        env:
+          INPUT_OUT1: OUT-ENV
+          INPUT_OUT2: OUT-ENV
