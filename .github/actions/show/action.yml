@@ -31,4 +31,5 @@ runs:
           console.log("1:" +core.getInput('OUT1'));
           console.log("2:" +core.getInput('OUT2'));
           console.log("3:" +core.getInput('OUT3'));
+          console.log(process.env);
       
