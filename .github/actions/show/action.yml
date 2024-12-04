@@ -25,7 +25,7 @@ runs:
       uses: actions/github-script@v7
       with:
         script: |
-          const out1 = core.getInput('OUT1', { required: true });
-          const out2 = core.getInput('OUT2', { required: false });
-          const out3 = core.getInput('OUT3', { required: false });
+          const out1 = core.getInput('OUT1');
+          const out2 = core.getInput('OUT2');
+          const out3 = core.getInput('OUT3');
       
