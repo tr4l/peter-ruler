@@ -5,6 +5,8 @@ inputs:
   OUT1:
     required: true
   OUT2:
+    required: false
+    default: OUT-DEFAULT
     
 runs:
   using: composite
