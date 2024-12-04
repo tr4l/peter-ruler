@@ -23,8 +23,7 @@ runs:
     
     - name: Show JS
       uses: actions/github-script@v7
-      env:
-        
+       
       with:
         OUT1: ${{ inputs.OUT1 }}
         OUT2: ${{ inputs.OUT3 }}
