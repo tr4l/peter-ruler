@@ -13,11 +13,11 @@ runs:
   steps:
     - name: Show
       shell: bash
-      run: 
-      echo ${{ inputs.OUT1 }}
-      echo ${{ inputs.OUT2 }}
-      echo ${{ inputs.OUT3 }}
-      echo ${INPUT_OUT1}
-      echo ${INPUT_OUT2}
-      echo ${INPUT_OUT3}
+      run: |
+        echo ${{ inputs.OUT1 }}
+        echo ${{ inputs.OUT2 }}
+        echo ${{ inputs.OUT3 }}
+        echo ${INPUT_OUT1}
+        echo ${INPUT_OUT2}
+        echo ${INPUT_OUT3}
       
