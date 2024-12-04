@@ -1,0 +1,12 @@
+name: 'Show input JS'
+
+inputs:
+  OUT1:
+    required: true
+  OUT2:
+    required: false
+    default: OUT-DEFAULT
+    
+runs:
+  using: node20
+  main: index.js
