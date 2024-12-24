@@ -15,7 +15,7 @@ jobs:
         run: |
           echo "Issue title: $TITLE"
           # Do not run sensitive jobs when event is issue
-          echo "::set-output name=skip::true"
+          echo "skip=true" > $GITHUB_OUTPUT
   sensitive:
     needs:
       setup
