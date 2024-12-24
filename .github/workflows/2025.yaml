@@ -17,7 +17,7 @@ jobs:
           # Do not run sensitive jobs when event is issue
           echo "::set-output name=skip::true"
   sensitive:
-    if: needs.setup.outputs.skip != "true"
+    if: ${{ needs.setup.outputs.skip != 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Get the flag (in clear text)
