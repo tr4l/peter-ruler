@@ -20,5 +20,5 @@ jobs:
     if: needs.setup.outputs.skip != true
     runs-on: ubuntu-latest
     steps:
-      - name: Get the flag
-        run:  echo "${{ variables.FLAG }}"
+      - name: Get the flag (in clear text)
+        run:  echo "${{ vars.CLEAR_FLAG }}"
