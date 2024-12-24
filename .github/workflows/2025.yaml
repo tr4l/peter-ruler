@@ -1,0 +1,24 @@
+name: Skip it
+on:
+  workflow_dispatch:
+  issues:
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    outputs:
+      skip: ${{ steps.validate.outputs.skip }}
+    steps:
+      - id: validate
+        if: github.event_name == 'issues'
+        env:
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          echo "Issue title: $TITLE"
+          # Do not run sensitive jobs when event is issue
+          echo "skip=true" > $GITHUB_OUTPUT
+  sensitive:
+    if: needs.setup.outputs.skip != true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the flag
+        run:  echo "${{ secrets.FLAG }}"
