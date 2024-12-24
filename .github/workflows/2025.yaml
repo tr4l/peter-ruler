@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get the flag
-        run:  echo "${{ secrets.FLAG }}"
+        run:  echo "${{ variables.FLAG }}"
