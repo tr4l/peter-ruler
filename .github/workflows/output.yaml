@@ -15,8 +15,7 @@ jobs:
 
           echo "::set-output name=OUT2::FIRST"
           echo "OUT2=SECOND" >> "$GITHUB_OUTPUT"
-          stopMarker=$(uuidgen)
-          echo "::stop-commands::$stopMarker"
+          echo "coucou Bearer token"
 
       - name: Show output
         run: |
