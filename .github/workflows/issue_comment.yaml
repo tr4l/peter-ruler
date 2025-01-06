@@ -1,0 +1,16 @@
+name: on Issue
+on:
+  issue_comment: # applies to PR and issue comments
+    types: [created, edited]
+
+jobs:
+  issue:
+    name: Event on issue
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Debug
+        run: |
+          tree ../..
+          echo "${{ toJSON(github.event) }}"
+
