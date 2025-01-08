@@ -1,4 +1,4 @@
-name: on Issue
+name: on Issue - ${{ github.event.name }}
 on:
   issue_comment: # applies to PR and issue comments
     types: [created, edited]
