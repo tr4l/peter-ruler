@@ -1,0 +1,17 @@
+name: Notify Slack user on workflow failure
+
+on:
+  workflow_run:
+    workflows: ["Package & Release", "Build"]
+    types:
+      - completed
+
+jobs:
+  notify_failure:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Retrieve PR info
+      id: retrieve_pr_info
+      run: |
+        echo coucou
