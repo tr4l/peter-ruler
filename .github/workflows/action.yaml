@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: tr4l/peter-ruler@cafe
+      - uses: tr4l/peter-ruler@2ea366
    
       - name: Regular case 1
         uses: ./.github/actions/show
