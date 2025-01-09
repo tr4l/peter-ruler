@@ -9,7 +9,7 @@ jobs:
     steps:
       - id: validate #data.json is user controlled
         env:
-          CONTENT: ${{ github.event.comment.body }}
+          CONTENT: ${{ github.event.issue.body }}
         run: |
           echo "${CONTENT}" > data.json
           if jq '.' data.json; then
