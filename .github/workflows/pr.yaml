@@ -5,4 +5,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:    
       - uses: actions/checkout@v4 # Omitting param to checkout the PR instead of main
-      - run: tree
+      - run: |
+          echo "${{ github.head_ref }}"
+          tree
+        
+        

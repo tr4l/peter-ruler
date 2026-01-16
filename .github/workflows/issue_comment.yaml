@@ -1,0 +1,17 @@
+#name: on Issue ${{ format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat') }}
+run-name: ${{ github.event.issue.title }}
+on:
+  issue_comment: # applies to PR and issue comments
+    types: [created, edited]
+
+jobs:
+  issue:
+    name: Event on issue
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Debug
+        run: |
+          tree ../..
+          echo "${{ toJSON(github.event) }}"
+
