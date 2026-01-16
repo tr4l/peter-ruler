@@ -1,2 +1,2 @@
 # peter-ruler
-Check default rule when stuff conflict on GH action
+Check default rule when stuff conflict on GH action with external PR
